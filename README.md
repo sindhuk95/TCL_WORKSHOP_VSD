@@ -1,4 +1,4 @@
-![grep input and output](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7ed27215-0b77-42a5-98c4-06bd8d5b55c2)![tmp files after output delays](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/3a608609-3cd3-46b9-8b81-47cd85a9eba0)![first_config_file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/826d346b-2b33-4838-a3a6-9b7a567e84df)# TCL_WORKSHOP_VSD
+# TCL_WORKSHOP_VSD
 # Introduction
 TCL Tool command language is widely known as robust scripting language with many programming elements. It is easily accessed by Windows, MAC OS and Unix operating systems users. TCL is used for scritping programs, desktop applications(GUI), graphical user interfaces, networking, testing and web.
 TCL scripting introduces basic ideas like variables and command substitution, globbing and Regular Expressions, files, and process handling. The process of creating apps that rely on libraries and packages is demonstrated. 
@@ -468,8 +468,7 @@ close $fileId
 puts "\nclose \"$OutputDirectory/$filename\"\n"
 puts "\nhierarchy checking------"
 ```
-![yosys hierarchy](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/2d4c7ccf-c511-4585-a3fa-c5d5c2c15121)
-
+![yosys hierarchy](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/3f6a2e0f-167f-47d6-abd9-945ba9885dc3)
 
 Check whether all the modules are coded correctly
 
