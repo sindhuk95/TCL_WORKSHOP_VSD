@@ -22,11 +22,10 @@ libreoffice openMSP430_design_details.csv
 ```
 ![inputs to tcl box](https://github.com/sindhuk95/unknown/assets/135046169/0edc6361-b2fb-46fc-9cdf-499a1e1e5113)
 
-![inputs to tcl box](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/1271f039-b63c-4ce6-86cf-1151040366a6)
-
 In this course we implement TCL script which is in the bottom line of the shell script **(sindhusynth)**. The below image is content of TCL Box.
 
-![sindhusynth](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/8d4d26ea-9cb8-4ebf-bd8f-0facca42f53a)
+![sindhusynth](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7b0b0303-f7fd-486d-ba73-69a32050bc23)
+
 
 ## SUBTASK
 For top down approach, lets divide task into few more sub task for easy implementation.
