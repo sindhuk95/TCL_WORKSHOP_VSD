@@ -1,4 +1,4 @@
-# TCL_WORKSHOP_VSD
+![grep input and output](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7ed27215-0b77-42a5-98c4-06bd8d5b55c2)![tmp files after output delays](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/3a608609-3cd3-46b9-8b81-47cd85a9eba0)![first_config_file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/826d346b-2b33-4838-a3a6-9b7a567e84df)# TCL_WORKSHOP_VSD
 # Introduction
 TCL Tool command language is widely known as robust scripting language with many programming elements. It is easily accessed by Windows, MAC OS and Unix operating systems users. TCL is used for scritping programs, desktop applications(GUI), graphical user interfaces, networking, testing and web.
 TCL scripting introduces basic ideas like variables and command substitution, globbing and Regular Expressions, files, and process handling. The process of creating apps that rely on libraries and packages is demonstrated. 
@@ -75,7 +75,7 @@ echo
 ```
 Execution looks like
 
-![synth log](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/4abc0e6d-1c26-4936-846c-b4c993dd09a8)
+![synth log](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d2fabfe1-c989-467b-9421-a44f205a0042)
 
 Since we are passing the input as argument, Lets consider few scenarios for User point of view
 We script few lines of code for these scnearios.
@@ -91,7 +91,7 @@ Here argv is argument that need to passed next to the script file. From the belo
 
 The command prompt shows the above script info saying
 
-![scn1](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/550225a6-64f0-49a6-b7cf-b9cc5dbf492d)
+![scn1](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/1c09c1d4-f163-49d7-9ca4-76aa22f9d87d)
 
 ### Scenario 2 - Where user passes an argument that is not present in our design.
 
@@ -105,7 +105,7 @@ f (! -f $argv[1] || $argv[1] == "-help") then
 ```
 When i gave an incorrect argument like below, the above code gets executed and displays the error on the command prompt
 
-![scen 2](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/df51a77e-a249-40df-8b88-14d8ff6b1974)
+![scen 2](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/298981c6-4a3c-47f1-9db5-d986ed2d1617)
 
 ### Scenario 3 - where user passes argument as help
 code
@@ -135,7 +135,8 @@ code
 ```
 When help is passed as an argument, the command prompt displays the above code
 
-![scn3](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/272ae04e-ce4a-4ec0-a16a-0f8f666d02a0)
+![scn3](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d970e25e-da72-4f46-8b75-ad99527cbeac)
+
 
 ### Pass the csv file to tcl script from the unix shell
 
@@ -205,7 +206,7 @@ puts "LateLibraryPath = $LateLibraryPath"
 ```
 Once the above piece of code is executed, we get the file names displayed on the command prompt
 
-![auto creation of variables](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/f7ec98e0-a652-491e-9955-24e7636d7d41)
+![auto creation of variables](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/5d409a4f-c6d6-4a3b-8c34-358d671111eb)
 
 ### Check if Direcotories and files mentioned in .csv exists or not
 
@@ -238,11 +239,11 @@ if {! [file isdirectory $OutputDirectory] } {
 ```
 Now, prompt displays the above code when correct files were provided
 
-![files and driectories exits](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7f51ba63-9aab-41a9-b9f3-a2098b2f4cb8)
+![files and driectories exits](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/5bd8c778-d98c-47e6-94b1-11b859dfe15e)
 
 when user gives a wrong path for files, an error will be displayed
 
-![error for missing fdiles or wrong paths](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/645f2ef4-8e54-4518-a419-df79bcdd8ed7)
+![error for missing fdiles or wrong paths](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/51f5f82d-6a7e-4576-80d6-7589657eaedb)
 
 
 Few Steps before reading the constraint file is
@@ -252,13 +253,13 @@ Few Steps before reading the constraint file is
 3. link the matrix to the array **my_arr(colu,rows)**
 4. string mapping
 
-![dumping constraints](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/9c9e49bd-2db3-4663-8695-ef3cf7f090d8)
+![dumping constraints](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d8a1114b-ed82-4592-9d82-762153069bdd)
 
 Inorder to access the constraint file, we need to know the columns and rows for clocks,inputs and outputs and process them
 
-![cio rows and columns](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/2abd1683-cb9e-4ff1-95dd-23764b38fe55)
+![cio rows and columns](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/10d5a3de-9c6d-4106-a687-5c12345553de)
 
-![rows and columns](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/12fbde27-081f-4c47-8e8c-e15017904796)
+![rows and columns](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/743948aa-0611-49e8-ab0c-98b0a3c83353)
 
 # DAY 3 Processing Clock and Input Constraints
 
@@ -280,7 +281,7 @@ set clock_early_fall_slew_start [lindex [lindex [constraints search rect $clock_
 set clock_late_rise_slew_start [lindex [lindex [constraints search rect $clock_start_column $clock_start [expr {$no_of_columns-1}] [expr {$input_ports_start-1}] late_rise_slew] 0 ] 0]
 set clock_late_fall_slew_start [lindex [lindex [constraints search rect $clock_start_column $clock_start [expr {$no_of_columns-1}] [expr {$input_ports_start-1}] late_fall_slew] 0 ] 0]
 ```
-![clock constraints](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/8999acf3-30bd-4602-a638-b9546ca2e1b7)
+![clock constraints](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d0bb6aa7-b22e-49d3-9c35-71df838de258)
 
 Using the above variables, let us create the clock parameters
 
@@ -304,8 +305,7 @@ while { $i < $end_of_ports } {
 ```
 Once we create these parameters, these are dumped into sdc file 
 
-![clock constraints 2](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/094bf0ed-5c7a-4e57-83a3-08fe65666971)
-
+![clock constraints 2](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/512714e2-2d48-4e17-af31-9e60647fe645)
 
 ## Inputs Processing
 
@@ -369,16 +369,15 @@ if {$count > 2} {
         set inp_ports [constraints get cell 0 $i]
 }
 ```
-![output input process](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7c6c2370-2a36-4ec8-a139-73fe30307adb)
-
+![output input process](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/88dc621e-de92-4509-b5ed-9d2d4404e0b9)
 
 **Input Ports created in sdc file**
 
-![sdc file inputs](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/c6245c79-a929-40b3-af85-d6b8324b1ece)
+![sdc file inputs](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/1da2b5b1-365d-4ff1-9e58-2f1cbddcfd5c)
 
 Grep the input port names just for observation
 
-![input port name](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/87308b0d-9e7a-4cb7-895d-4a48dbcb2584)
+![input port name](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/74f17a3e-3ef3-40e5-807b-d58c697cfedb)
 
 In the same manner, output ports are declared and created in sdc,
 we set variables for output parameters
@@ -430,15 +429,16 @@ if {$count > 2} {
         set op_ports [constraints get cell 0 $i]
 }
 ```
-![output output process](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/adb496b0-8579-4617-8854-bfe808c3d946)
+
+![output output process](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/b83c7688-c606-4d5e-ad4c-a2c0b708648f)
 
 Output port names are created in sdc files
 
-![sdc out files](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/81bf1213-d5fe-443d-9e41-c2434f42c2d6)
+![sdc out files](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/65375fdd-309d-4274-b17b-fd600dae78b1)
 
 Grep the output port names for observation
 
-![output portname](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/c3042764-fbdd-4228-9e7b-89fbc8abaaa9)
+![output portname](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/46143e8d-e31c-416b-bb92-36ea08c3c244)
 
 # DAY 4 YOSYS Synthesis Intro
 ## YOSYS (YOSYS Open Synthesis Suite)
@@ -493,18 +493,15 @@ if { [catch { exec yosys -s $OutputDirectory/$DesignName.hier.ys >& $OutputDirec
 puts "\nInfo: Please find hierarchy check details in [file normalize $OutputDirectory/$DesignName.hierarchy_check.log] for more info"
 cd $working_dir
 ```
-
-![hierarchy err_flag 0](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/a0fce480-a6bd-4d9f-b856-393faf000935)
-
+![hierarchy err_flag 0](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/30f0e526-78f8-4494-ba81-aeac25bb7053)
 
 **Error Handling** : reference module error due to incorrectly coded or module doesnt exist 
 
-![hierarchy err_flag 1](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/bc4e460a-7444-433a-af8b-d301681e94f4)
+![hierarchy err_flag 1](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/3ab2da81-38c6-4ba9-877a-e096bad47127)
 
 **Error in the error log file**
 
-![error in log file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/e5b2921a-abdb-4e29-b155-938e496b7d6d)
-
+![error in log file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/6b442eaf-3844-4532-a984-9f71bcee30b5)
 
 # DAY 5 ADVANCED SCRIPTING and QUALITY OF RESULTS GENERATION
 ## Synthesis main file scritping and run
@@ -540,13 +537,11 @@ if {[catch { exec yosys -s $OutputDirectory/$DesignName.ys >& $OutputDirectory/$
 }
 puts "\nInfo: Please refer to log $OutputDirectory/$DesignName.synthesis.log"
 ```
+![synthesis success](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d311e05f-e793-4d9e-b2c3-3a483727673d)
 
-![synthesis success](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/36d45fcc-602f-4cb1-b00a-08a17f21b387)
-
- 
 ## Synthesised Netlist
 
-![final synth file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/103baa01-9f06-47ed-9f14-0636ddde5375)
+![final synth again](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/cfea718f-db00-4aa9-b3e7-dd625bd4922a)
 
 # Need and script to edit Yosys Output Netlist
 ## Converting format[1] to format [2]
@@ -580,11 +575,11 @@ puts "\n$OutputDirectory/$DesignName.final.synth.v"
 ```
 ### Original synthesized file with *s and \s present
 
-![new start file with count](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/2076b1ac-b13e-4b64-a734-26e3a6c8ee02)
+![new start file with count](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/713b2882-be13-4a76-8c33-6287cf3793de)
 
 ### Netlist after removing *s and \s
 
-![final synth file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/6c36b235-20f7-4087-a2f4-e8ce590b0367)
+![final synth file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/ea7cbb1f-b512-4ff0-bc75-39a27d2228d3)
 
 Synthesised netlist in opentimer understandable format is produced. In the same way we have to do for all the reset the input files need for opentimer like sdc,lib.
 For this we used **PROCS**
@@ -655,14 +650,13 @@ source /home/vsduser/vsdsynth/procs/set_num_threads.proc
 reopenStdout $OutputDirectory/$DesignName.conf
 set_multi_cpu_usage -localCpu 6
 ```
-![first_config_file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d349007d-2d62-474f-81ca-b29b33a80da8)
+![first_config_file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/071522ea-980d-4004-8e43-4cfd8bf9aa4d)
 
 - "array set options { -localCpu <num_of_threads> -help "" }" --> set an array named options. options is a list of key-value pairs, where each key is a string representing the element's name, and each value is the corresponding value to assign to that element. eg, "-localCpu is linked to <num_of_threads>" and "-help" is linked to "".
 - "switch -glob -- [lindex $args 0]" --> globbing is used to get the term inside [] so that switch can map to the corresponding case. Takes only the ket of the key-value pair
 - "set args [lassign $args - options(-localCpu)]" --> assigning new value to args after removing the array element which was used to enter the loop
 
 * **read_lib.proc**
-
 
 ```
 proc read_lib args {
@@ -688,7 +682,7 @@ proc read_lib args {
 	}
 }
 ```
-![lib conf](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/92966065-048c-4fb6-95b0-9d78602a3bb9)
+![lib conf](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/e980a34d-02c0-4fd8-aee3-3e65fec8485d)
 
 Similar to the set_num_threads proc , the read_lib proc will have 3 options i.e late early and help
 the proc ensures to read the late and early lib file for STA and write it in a file
@@ -702,7 +696,7 @@ proc read_verilog arg1 {
 ```
 This proc enters the puts statement followed by the netlist file
 
-![verilog file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/752a5c69-4b40-445c-9842-3c6c78204194)
+![verilog file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7d3664d4-656a-4c4a-80fd-9fa9c7c1ca31)
 
 * **read_sdc.proc**
 
@@ -720,11 +714,11 @@ set tmp_file [open /tmp/1 w]
 puts -nonewline $tmp_file [string map {"\[" "" "\]" " "} [read $sdc]]
 close $tmp_file
 ```
-![sdc name](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/141d849c-3f1f-45f0-9de5-c41c7ac0e4bf)
+![sdc name](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/2082255f-7dad-4cef-b58c-49dc835827d8)
 
 sdc files after removing brackets
 
-![sdc file with removed square brackets](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/882e55d5-42aa-44fe-a55c-cfdf223435d6)
+![sdc file with removed square brackets](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/b07bc472-18c3-426a-a18d-91bd8b5589f1)
 
 * **Split the lines based on newline charachter and create clock constraints**
   
@@ -741,11 +735,11 @@ foreach elem $find_clocks {
         }
 close $tmp_file
 ```
-![clock constraints](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/74c16bea-efd8-41ee-8556-042b239dd690)
+![clock constraints](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/aac179c4-20fb-4186-8f6c-9e62645c52a8)
 
 tmp file tmp1 has intermediate data i.e., sdc file with removed brackets and tmp3 has final timing file which in this stage have clock constraints required for opentimer
 
-![sdc file with removed square brackets and clock format](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/5921df88-a5a6-47ad-934d-2e07c231a126)
+![sdc file with removed square brackets and clock format](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/55cc09dd-e19e-48ca-b823-3c22458ae78e)
 
 * **Convert clock latency constraints**
   
@@ -776,11 +770,11 @@ set tmp2_file [open /tmp/2 r]
 puts -nonewline $timing_file [read $tmp2_file]
 close $tmp2_file
 ```
-![clock latency](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/9d7a985b-02c5-483d-874c-3730426fa92e)
+![clock latency](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/b23b4472-86f4-42c5-af6d-25dad1770665)
 
 tmp file tmp2 has intermediate data i.e., delay values and tmp3 has final timing file which in this stage have clock and its latency constraints required for opentimer
 
-![tmp files after clock latency](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7f2532e3-35a0-45f4-8485-2974dd40da1e)
+![tmp files after clock latency](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/e12c71ca-b2ad-4733-8392-3330049ce7d5)
 
 * **Convert clock transition constraints**
 ```
@@ -806,11 +800,11 @@ set tmp2_file [open /tmp/2 r]
 puts -nonewline $timing_file [read $tmp2_file]
 close $tmp2_file
 ```
-![clock transition](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/6362a1b8-fbe0-42a7-9eca-aa315e469e91)
+![clock transition](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/0b2f88ac-b187-47cc-9dee-c4bef2d05d91)
 
 tmp file tmp2 has intermediate data i.e., clock transition i.e., slew values and tmp3 has final timing file which in this stage have clock constraints required for opentimer
 
-![tmp files after transition](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/50639b81-b48a-4685-9e9e-09b051a2d85d)
+![tmp files after transition](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/5ab452cb-e893-44c2-b01f-3be03c42ec7e)
 
 similarly we do for inputs and outputs , you can refer to this proc under resources section
 
@@ -838,11 +832,11 @@ set tmp2_file [open /tmp/2 r]
 puts -nonewline $timing_file [read $tmp2_file]
 close $tmp2_file
 ```
-![input delay constra](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/630c4830-75fa-4766-99c8-84fe834acace)
+![input delay constra](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/57d41807-63a5-48b8-83b4-bd71f94a51f9)
 
 tmp file tmp2 has intermediate data i.e., input delays and tmp3 has final timing file which in this stage have clock constraints, input delays required for opentimer
 
-![tmp files after input](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7c00876d-f40a-4e5d-994d-636cfb0c619b)
+![tmp files after input](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/877dfbd5-1651-42b2-b17b-e613e1ab754d)
 
 * **Convert input transition constraints**
 ```
@@ -863,15 +857,17 @@ foreach elem $find_keyword {
 	}
 }
 
+
 close $tmp2_file
 set tmp2_file [open /tmp/2 r]
 puts -nonewline $timing_file [read $tmp2_file]
 close $tmp2_file
 ```
+![input slew](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d6101657-b3e8-4df7-b76c-9db185d4d3e3)
 
 tmp file tmp2 has intermediate data i.e., input transition i.e., slew values and tmp3 has final timing file which in this stage have clock and input constraints required for opentimer
 
-![tmp files after total input](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/4bafc09a-3052-4dbc-b8a5-13a035ffaa81)
+![tmp files after total input](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/e47e174a-3674-4b3a-997d-fc3c33faad89)
 
 * **Convert output delay constraints**
 ```
@@ -897,10 +893,11 @@ set tmp2_file [open /tmp/2 r]
 puts -nonewline $timing_file [read $tmp2_file]
 close $tmp2_file
 ```
+![output delay](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7ed66532-f3ce-4aea-a746-bcb6abc0edd3)
 
 tmp file tmp2 has intermediate data i.e., output delays and tmp3 has final timing file which in this stage have clock and input constraints, output delays required for opentimer
 
-![tmp files after output delays](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/39697934-e9fd-4c3a-8406-5cb13ddc85bd)
+![tmp files after output delays](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/72eec5fd-0e46-4399-902b-d98d9dcff776)
 
 
 * **Convert output load constraint**
@@ -927,19 +924,19 @@ puts -nonewline $timing_file  [read $tmp2_file]
 close $tmp2_file
 close $timing_file
 ```
-![output load](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/bb63a8ed-e788-44d2-9220-2b077254ff55)
+![output load](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/0193b575-8fea-4119-b7f3-d75d25bddc16)
 
 tmp file (tmp3) has final timing file which in this stage have all the clock, input and output constraints required for opentimer
 
-![tmp files after output](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/51b78d4a-f9a2-48e3-9195-6a5c0f8725e2)
+![tmp files after output](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/54294757-4e99-435d-80d7-28fe0efcad50)
 
 check for bussed input and output ports in tmp3 file
 
-![stars in tmp3 file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/ebd25474-acff-4ddf-90cc-16c62a26e803)
+![stars in tmp3 file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/c19c3a0e-6ef5-4e0f-b8bb-c5784d9afe2b)
 
 Convert these bussed ports into bit blasted ports by using netlist. Check the bit blasted ports in netlist using grep.
 
-![grep input and output](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/a4e7bde7-6c66-401b-a7d2-f6c966ae04a7)
+![grep input and output](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/a5406163-4c3b-485a-9266-27cce73c09c1)
 
 ```
 set ot_timing_file [open $sdc_dirname/$sdc_filename.timing w]
@@ -964,15 +961,15 @@ close $timing_file
 puts "set_timing_fpath $sdc_dirname/$sdc_filename.timing"
 }
 ```
-![bussed to bit ports](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/f5769dac-a8bb-45de-b05b-ef10941f76e1)
+![bussed to bit ports](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/42d855f9-3eff-4b55-bca3-5ab9424c1ee2)
 
 lets check what tmp3 file has
 
-![tmp file with bussed ports](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/692c91c5-fb7f-4642-a2c8-3f2aa6317197)
+![tmp file with bussed ports](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/50877a42-b275-496a-b43d-0fa73f061996)
 
 These bussed ports are converted to bit blased ports in the timimg file
 
-![bussed to bit blasted ports in timimg file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d4f14de9-8818-4fce-bb62-1971b4c3fd3a)
+![bussed to bit blasted ports in timimg file](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/22e5a580-92ab-48be-84fe-2bac5481c0c8)
 
 * **Creating a .spef and .conf file**
 **Master file** provided to the OpenTimer tool to perform STA. This config file has paths for netlist, timing, library, spef. It also consists of timer and reports generation for worst slack, worst paths.
@@ -1010,11 +1007,11 @@ close $conf_file
 ```
 **Spef file**
 
-![spef](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/3b016044-70fd-4147-856a-24f05ba9a2ed)
+![spef](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/3fe3e7aa-c10b-48d2-8031-39e362ac8652)
 
 **Conf file**
 
-![conf](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/1fc6a49b-f548-4c6e-a36b-c9a1c85ba3e8)
+![conf](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/30d765d5-3339-42cf-b6d9-3f1330c9db1e)
 
 # QOR - Quality of Results
 To determine the performance of our design, we use QOR. Lets design QOR in horizontal format. Based on vendors there might be vertical format also. We can extrapolate the horizaontal format to produce vertical format QOR.
@@ -1029,13 +1026,13 @@ puts "time_elapsed_in_sec is $time_elapsed_in_sec"
 puts "\nInfo: STA finished in $time_elapsed_in_sec seconds"
 puts "\nInfo: Refer to $OutputDirectory/$DesignName.results for warnings and errors"
 ```
-![runtime](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/93843dfa-a5dc-4ee8-bd4b-81886b459314)
+![runtime](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/30e5cb63-5641-49f1-9f5d-7e542dfbf0cf)
 
 **Script for worst negative slack for output interface**
 
 Timimg paths got violated and these negative slacks values are metioned in the results file using RAT variable. In these negative slack values, we will have the worst negative slack value which is mentioned first in the file. check the below for more clarity.
 
-![RAT in results final](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/1a795d84-9b2c-41f1-a1e1-3589e70b5ba7)
+![RAT in results final](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/03402812-2b66-465b-9438-7122ccf26210)
 
 ```
 set worst_RAT_slack "-"
@@ -1051,13 +1048,13 @@ while {[gets $report_file line] != -1} {
 }
 close $report_file
 ```
-![rat on prompt](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7b688921-7b26-4c87-aa04-ede8ab4a276c)
+![rat on prompt](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/bf567201-db83-4367-ad36-ccf76f75e7a4)
 
 **Script for number of worst negative slack**
 
 Lets check manually by grepping RAT from results file and do word count
 
-![RAT count](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/68ad9612-1c9f-42f7-9fb7-7f0a2e6f5db7)
+![RAT count](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/008fea5c-455b-4a50-b4a2-2b77b2e7b8bc)
 
 ```
 set report_file [open $OutputDirectory/$DesignName.results r]
@@ -1068,13 +1065,13 @@ while {[gets $report_file line] != -1} {
 set Number_output_violations $count
 close $report_file
 ```
-![no of RAT](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/73217f18-ffc7-499f-9931-15107d3be0d4)
+![no of RAT](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/4dafdc8b-a2d9-450e-be6a-307cfa7f5ced)
 
 **Script for worst setup slack**
 
 Manually grepping the setup slack violation
 
-![setup pattern](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/536fe852-7b1f-4e25-8827-012a349646f4)
+![setup pattern](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/331b4855-4f6d-4ba8-bf22-53f67572b8f5)
 
 ```
 set worst_negative_setup_slack "-"
@@ -1090,13 +1087,13 @@ while {[gets $report_file line] != -1} {
 }
 close $report_file
 ```
-![setup violation value](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/10136953-5c9f-449d-bc88-a278e4a11108)
+![setup violation value](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/3adb85dc-46d6-43cb-b46f-b88db2e2eaf5)
 
 **Script for number of setup slack violations**
 
 Manually checking the setup slack violation count
 
-![no of setup violations](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/7bac2f82-094f-4e2f-ac3a-f9ff225ed165)
+![no of setup violations](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/d073645e-f6b1-4236-961c-7f893ecad711)
 
 ```
 set report_file [open $OutputDirectory/$DesignName.results r]
@@ -1107,13 +1104,13 @@ while {[gets $report_file line] != -1} {
 set Number_of_setup_violations $count
 close $report_file
 ```
-![setup no od vio](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/0d19354e-e8a3-44ab-89cb-c509df7edaa4)
+![setup no od vio](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/e12362ee-fef7-4c60-a984-0b1b9ad62527)
 
 **Script for worst hold slack**
 
 Manually grepping the hold slack violation
 
-![hold pattern](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/fd1c1b02-41b8-4d71-adba-f8fc950737bf)
+![hold pattern](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/17dab773-3db0-4c35-a754-b367695a57df)
 
 ```
 set worst_negative_hold_slack "-"
@@ -1133,7 +1130,7 @@ close $report_file
 
 Manually checking the hold violation count
 
-![no of hold violations](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/8a308934-47b4-4ebc-b277-76862aa9cfe8)
+![no of hold violations](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/6e17802b-e8ad-42ca-9d56-d2df3023f2e2)
 
 ```
 set report_file [open $OutputDirectory/$DesignName.results r]
@@ -1144,7 +1141,7 @@ while {[gets $report_file line] != -1} {
 set Number_of_hold_violations $count
 close $report_file
 ```
-![hold vio num](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/0ed2f25d-0ea1-4930-a06d-b355f4927f16)
+![hold vio num](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/bdf00123-b131-4149-8ef4-e2f4668c8225)
 
 **Scirpt for number of instances in our design**
 
@@ -1162,7 +1159,7 @@ while {[gets $report_file line] != -1} {
 }
 close $report_file
 ```
-![instances](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/a02ea078-379b-4246-8ac4-e23e893f206d)
+![instances](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/ea8a8f34-61ae-4370-a9af-07b4e4dabab2)
 
 **Script for quality of results datasheet**
 
@@ -1179,8 +1176,7 @@ puts "Number_of_hold_violations is \{$Number_of_hold_violations\}"
 puts "worst_RAT_slack is \{$worst_RAT_slack\}"
 puts "Number_output_violations is \{$Number_output_violations\}"
 ```
-
-![Horizontal format](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/9c374fe0-455d-4a58-8e79-eb74b2085201)
+![Horizontal format](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/c9a5938a-21a9-42c7-8440-db6fe6ea93b1)
 
 ```
 puts "\n"
@@ -1210,11 +1206,11 @@ set worst_negative_hold_slack "$worst_negative_hold_slack negvalue88"
 ```
 Add the above two lines of sciprt and see the change in the QOR datasheet.
 
-![modified qor](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/e4cad1f6-3f47-488a-899e-005210f0f3ff)
+![modified qor](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/a4721bec-eba6-48c5-b6bc-a6ceae2c6e4b)
 
 ## Final Quality of Results(QOR)
 
-![QOR](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/ee63ae5e-a07c-498c-b3c2-cbc7d8935cb0)
+![QOR](https://github.com/sindhuk95/TCL_WORKSHOP_VSD/assets/135046169/8a00042d-5b50-40c9-9b7f-c4f3172581f4)
 
 # Conclusion
 * Encapsulated the enitre design in the form of an excel sheet.
