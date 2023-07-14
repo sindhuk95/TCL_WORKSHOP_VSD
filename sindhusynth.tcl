@@ -196,16 +196,10 @@ puts "\nInfo-SDC: Working on IO constraints....."
 puts "\nInfo-SDC: Categorizing input ports as bits and bussed"
 
 while { $i < $end_of_ports } {
-#---------------differentiating input ports as bussed and bits-------------------#
-#glob command is used to match all the files with the same pattern as specified. In our case its matching all the .v files in $NetlistDirectory.
-#$netlist will have the path as well as the files stored in it separated by a space 
+#---------------differentiating input ports as bussed and bits-------------------# 
 set netlist [glob -dir $NetlistDirectory *.v] 
 set tmp_file [open /tmp/1 w]
 
-#$f will have each file that is present in $netlist. u open the file using fd. u read each line of the file using gets command.
-# u set a pattern1 as the name of the input. then compare in each line to check whether it exists using regexp. 
-#if it does ull split and take the 0 index term with delimiter as ";". now check if all lines have first term as input by removing spaces b/w in them. 
-#if they do make a string s1 by removing the the spaces. finally enter these into $tmp_file while subbing multiple sapces by a single space. now close $fd
 foreach f $netlist {
         set fd [open $f]
 		#puts "reading file $f"
@@ -222,7 +216,7 @@ foreach f $netlist {
 					puts -nonewline $tmp_file "\n[regsub -all {\s+} $s1 " "]"
 					#puts "\nreplace multiple spaces in s1 by space and reformat as \"[regsub -all {\s+} $s1 " "]\""
 				} 
-#				else { puts " \"$pattern2\" didnt have first term as 'input'" }
+                                #else { puts " \"$pattern2\" didnt have first term as 'input'" }
        		}
    		}
 close $fd
@@ -231,16 +225,12 @@ close $tmp_file
 
 set tmp_file [open /tmp/1 r]
 set tmp2_file [open /tmp/2 w]
-#read the $tmp_file ; split with \n as delimiter ; lsort - unique --> takes only unique 1 value; join with \n as delimiter; o/p is just 1 input line
 puts -nonewline $tmp2_file "[join [lsort -unique [split [read $tmp_file] \n]] \n]"
-#each time u open a file in write mode the data in side is overwritten
 close $tmp_file
 close $tmp2_file
 set tmp2_file [open /tmp/2 r]
-#count is set to check bussed and non bussed ports
 set count [llength [read $tmp2_file]] 
 #puts "\nsplitting content of tmp_ using space and counting number of elements as $count"
-#set check_bussed [constraints get cell $bussed_status $i]
 if {$count > 2} { 
 	set inp_ports [concat [constraints get cell 0 $i]*]
 	#puts "\nbussed" 
@@ -249,7 +239,7 @@ if {$count > 2} {
 	#puts "\nnot bussed"
 }
 
-
+#puts "input port name is $inp_ports since count is $count\n"
 puts -nonewline $sdc_file "\nset_input_delay -clock \[get_clocks [constraints get cell $related_clock $i]\] -min -rise -source_latency_included [constraints get cell $input_early_rise_delay_start $i] \[get_ports $inp_ports\]"
 puts -nonewline $sdc_file "\nset_input_delay -clock \[get_clocks [constraints get cell $related_clock $i]\] -min -fall -source_latency_included [constraints get cell $input_early_fall_delay_start $i] \[get_ports $inp_ports\]"
 puts -nonewline $sdc_file "\nset_input_delay -clock \[get_clocks [constraints get cell $related_clock $i]\] -max -rise -source_latency_included [constraints get cell $input_late_rise_delay_start $i] \[get_ports $inp_ports\]"
@@ -295,7 +285,7 @@ foreach f $netlist {
 				set pattern2 [lindex [split $line ";"] 0]
 			#puts "\ncreating pattern2 by splitting pattern1 using semi-colon as delimiter => \"$pattern2\""
 				if {[regexp -all {output} [lindex [split $pattern2 "\S+"] 0]]} {	
-			#puts "\nout of all patterns, \"$pattern2\" has matching string \"input\". So preserving this line and ignoring others"
+			#puts "\nout of all patterns, \"$pattern2\" has matching string \"input\"
 				set s1 "[lindex [split $pattern2 "\S+"] 0] [lindex [split $pattern2 "\S+"] 1] [lindex [split $pattern2 "\S+"] 2]"
 				#puts "\nprinting first 3 elements of pattern as \"$s1\" using space as delimiter"
 				puts -nonewline $tmp_file "\n[regsub -all {\s+} $s1 " "]"
@@ -375,7 +365,7 @@ puts "\nhierarchy checking------"
 #set my_err [catch {exec yosys -s $OutputDirectory/$DesignName.hier.ys >& $OutputDirectory/$DesignName.hierary_check.log} msg]
 #puts "err flag is $my_err"
 
-puts " from here "
+#puts " from here "
 
 if { [catch { exec yosys -s $OutputDirectory/$DesignName.hier.ys >& $OutputDirectory/$DesignName.hierarchy_check.log} msg]} {
 	set filename "$OutputDirectory/$DesignName.hierarchy_check.log"
@@ -533,6 +523,7 @@ puts "\nInfo: Refer to $OutputDirectory/$DesignName.results for warnings and err
 #--------------------------------------#
 #-----find worst output violation------#
 #--------------------------------------#
+
 set worst_RAT_slack "-"
 set report_file [open $OutputDirectory/$DesignName.results r]
 puts "report_file is $OutputDirectory/$DesignName.results"
@@ -653,6 +644,10 @@ while {[gets $report_file line] != -1} {
 }
 close $report_file
 
+#-----------------------------------------------------#
+#-----------vertical format of QOR datasheet----------#
+#-----------------------------------------------------#
+
 puts "\nDesign_name is \{$DesignName\}"
 puts "time_elapsed_in_sec is \{$time_elapsed_in_sec\}"
 puts "Instance_count is \{$Instance_count\}"
@@ -681,7 +676,7 @@ foreach design_name $DesignName runtime $time_elapsed_in_sec instance_count $Ins
 puts [format $formatStr "-----------" "-------" "--------------" "---------" "---------" "--------" "--------" "-------" "-------"]
 puts "\n"
 
-Puts "-------------------Thank You for teaching TCL scripting-----------------"
+Puts "-------------------Thank You---forteaching TCL scripting-----------------"
 
 
 
